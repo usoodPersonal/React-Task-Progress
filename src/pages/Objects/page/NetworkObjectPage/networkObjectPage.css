@@ -1,0 +1,290 @@
+body{
+  background-color: rgb(248,244,244);
+}
+.network-page-container {   
+  position: relative;
+    padding: 10px; 
+    
+    height:100%;
+   
+}  
+
+.network-page-header {   
+  display: flex;   
+  justify-content: space-between;   
+  align-items: center; 
+}  
+
+.network-add-btn {   
+  padding: 6px 12px;   
+  cursor: pointer;   
+  background-color: #00678C;   
+  border: none;   
+  color: white;   
+  border-radius: 4px; 
+}  
+
+.network-add-btn.small {   
+  padding: 4px 8px;   
+  font-size: 0.85rem; 
+}  
+
+.network-items-table {   
+  width: 100%;   
+  margin-top: 20px;   
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}  
+.network-items-table th:hover {
+  background-color: #c2c7cb;
+}
+
+.network-items-table th {
+  border-bottom: 2px solid #dee2e6;
+  padding: 12px 8px;
+  font-weight: 600;
+  text-align: left;
+  color: #495057;
+  font-size: 0.9rem;
+  BORDER-LEFT:2px solid #dee2e6
+}
+
+.network-items-table td {
+  border-bottom: 1px solid #dee2e6;
+  padding: 12px 8px;
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+.network-items-table tbody tr:hover {
+  background-color: #c2c7cb;;
+}
+
+.network-items-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Actions column styling */
+.network-items-table td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.network-modal-overlay {   
+  position: fixed;   
+  top: 0;   
+  left: 0;   
+  width: 100%;   
+  height: 100%;   
+  background-color: rgba(0,0,0,0.5);   
+  display: flex;   
+  justify-content: center;   
+  align-items: center;   
+  z-index: 1000; 
+}  
+
+.network-modal-card {   
+  background-color: white;   
+  padding: 28px;          
+  padding-right: 38px;     
+  border-radius: 10px;     
+  width: 500px;            
+  display: flex;   
+  flex-direction: column;   
+  gap: 14px;               
+  font-size: 1rem; 
+}  
+
+.network-modal-card input[type="text"] {   
+  width: 100%;   
+  padding: 10px;          
+  border-radius: 6px;      
+  border: 1px solid #ccc; 
+  font-size: 0.95rem;
+}  
+
+.network-radio-group label {   
+  margin-right: 10px;
+
+
+}  
+
+.network-modal-actions {   
+  display: flex;   
+  justify-content: flex-end;   
+  gap: 12px;              
+}  
+
+.network-save-btn {   
+  background-color: #00678C;   
+  color: white;   
+  border: none;   
+  padding: 8px 16px;       
+  cursor: pointer;   
+  border-radius: 5px; 
+  font-size: 0.95rem;
+}  
+
+.network-cancel-btn {   
+  background-color: white ;   
+  color: #049FD9;   
+  border: none;   
+  padding: 8px 16px;
+  cursor: pointer;   
+  border-radius: 5px; 
+  font-size: 0.95rem;
+}  
+
+.network-override-section {   
+  margin-top: 12px;   
+  border: 1px solid #ccc; 
+}  
+
+.network-override-header {   
+  display: flex;   
+  justify-content: space-between;   
+  align-items: center;   
+  background: #eee;   
+  padding: 8px 12px;  
+  font-weight: bold;   
+  cursor: pointer; 
+}  
+
+.network-override-table {   
+  width: 100%;   
+  border-collapse: collapse; 
+}  
+
+.network-override-table th, .network-override-table td {   
+  border: 1px solid #ccc;   
+  padding: 8px; 
+}  
+
+.network-no-records {   
+  text-align: center;   
+  color: #777;   
+  font-style: italic; 
+}  
+
+/* Expand/collapse arrow */ 
+.network-arrow {   
+  display: inline-block;   
+  margin-left: 6px;   
+  transition: transform 0.3s ease;    
+}  
+
+.network-arrow.open {   
+  transform: rotate(180deg); 
+}  
+
+/* Smooth toggle for override content */ 
+.network-override-content {   
+  max-height: 1000px;
+  overflow: hidden;      
+  transition: max-height 0.3s ease, opacity 0.3s ease;   
+  opacity: 1; 
+}  
+
+.network-override-content.hidden {   
+  max-height: 0;   
+  opacity: 0;   
+  pointer-events: none; 
+}  
+
+
+.network-modal-card h3 {   
+  margin-bottom: 14px;    
+  font-size: 1.2rem;    
+}  
+
+
+.network-modal-card label {   
+  font-size: 1rem;   
+  font-weight: 500;   
+  margin-top: 8px; 
+}  
+
+.network-edit-btn, .network-delete-btn {   
+  padding: 6px 12px;   
+  margin-left: 4px;   
+  cursor: pointer;   
+  border-radius: 4px;   
+  border: none;   
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+}  
+
+.network-edit-btn {   
+  background-color: #6c757d;   
+  color: white; 
+}
+
+.network-edit-btn:hover {
+  background-color: #5a6268;
+}
+
+.network-delete-btn {   
+  background-color: #dc3545;   
+  color: white; 
+}
+
+.network-delete-btn:hover {
+  background-color: #c82333;
+}
+
+
+.network-action-icons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.network-action-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.network-action-icon:hover {
+  opacity: 1;
+}
+
+
+.network-items-table th:last-child {
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 75px;
+}
+
+.network-items-table td:first-child,
+.network-items-table th:first-child {
+  white-space: nowrap;
+  padding-right: 150px;
+}
+
+.network-items-table th:nth-child(2),
+.network-items-table td:nth-child(2) {
+  white-space: nowrap;
+  padding-right: 10px;
+}
+
+.network-items-table th:nth-child(3),
+.network-items-table td:nth-child(3) {
+  white-space: nowrap;
+  padding-right: 100px;
+}
+
+.network-items-table th:nth-child(4) {
+  /* background-color: #c82333; */
+  padding-right:20px;
+}
+.network-items-table th:last-child {
+  /* background-color: #c82333; */
+  padding-left: 0;
+  width:20px;
+}

@@ -1,0 +1,255 @@
+body{
+  background-color: rgb(248,244,244);
+}
+.sinkhole-page-container {   
+  position: relative; 
+  padding: 10px;
+}  
+
+.sinkhole-page-header {   
+  display: flex;   
+  justify-content: space-between;   
+  align-items: center; 
+  margin-bottom: 16px;
+}  
+
+.sinkhole-add-btn {   
+  padding: 6px 12px;   
+  cursor: pointer;   
+  background-color: #00678C;   
+  border: none;   
+  color: white;   
+  border-radius: 4px; 
+  transition: background-color 0.2s ease;
+}  
+
+.sinkhole-add-btn:hover {
+  background-color: #005270;
+}
+
+.sinkhole-items-table {   
+  width: 100%;   
+  margin-top: 20px;   
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sinkhole-items-table th:nth-child(1) {   
+  width:400px;
+}
+.sinkhole-items-table th:nth-child(2) {   
+ width:1000px
+}
+.sinkhole-items-table th:last-child {
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 75px;
+}
+
+
+
+.sinkhole-items-table th:hover {
+  background-color: #c2c7cb;
+}
+
+
+.sinkhole-items-table th {
+  border-bottom: 2px solid #dee2e6;
+  padding: 12px 8px;
+  font-weight: 600;
+  text-align: left;
+  color: #495057;
+  font-size: 0.9rem;
+  BORDER-LEFT:2px solid #dee2e6
+}
+
+.sinkhole-items-table td {
+  border-bottom: 1px solid #dee2e6 ;
+  /* background-color: #fff; */
+  /* z-index: -1; */
+
+  padding: 12px 8px;
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+
+
+.sinkhole-items-table tbody tr:hover {
+  background-color: #c2c7cb;;
+  z-index: 1;
+  
+  
+}
+
+.sinkhole-items-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Actions column styling */
+.sinkhole-items-table td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+.sinkhole-items-table td:first-child,
+.sinkhole-items-table th:first-child {
+  white-space: nowrap;
+  padding-right: 900px;
+}
+
+.sinkhole-modal-overlay {   
+  position: fixed;   
+  top: 0;   
+  left: 0;   
+  width: 100%;   
+  height: 100%;   
+  background-color: rgba(0,0,0,0.5);   
+  display: flex;   
+  justify-content: center;   
+  align-items: center;   
+  z-index: 1000; 
+}  
+
+.sinkhole-modal-card {   
+  background-color: white;   
+  padding: 28px;          
+  border-radius: 10px;     
+  width: 480px;            
+  display: flex;   
+  flex-direction: column;   
+  gap: 14px;               
+  font-size: 0.95rem; 
+  /* box-shadow: 0 4px 20px rgba(0,0,0,0.1); */
+}  
+
+.sinkhole-modal-card h3 {   
+  margin-bottom: 10px;    
+  font-size: 1.2rem;    
+  font-weight: 600;
+}  
+
+.sinkhole-modal-card label {   
+  font-size: 0.95rem;   
+  font-weight: 500;   
+  margin-top: 6px; 
+}  
+
+.sinkhole-modal-card input[type="text"], 
+.sinkhole-modal-card select {   
+  width: 100%;   
+  padding: 10px;          
+  border-radius: 6px;      
+  border: 1px solid #ccc; 
+  font-size: 0.95rem;
+}  
+
+.sinkhole-radio-group {   
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.sinkhole-radio-group label {
+  font-size: 0.9rem;
+}
+
+.sinkhole-modal-actions {   
+  display: flex;   
+  justify-content: flex-end;   
+  gap: 12px;              
+  margin-top: 14px;
+}  
+
+.sinkhole-save-btn {   
+  background-color: #00678C;   
+  color: white;   
+  border: none;   
+  padding: 8px 16px;       
+  cursor: pointer;   
+  border-radius: 5px; 
+  font-size: 0.95rem;
+}  
+
+.sinkhole-cancel-btn {   
+  background-color: white ;   
+  color: #049FD9;   
+  border: none;   
+  padding: 8px 16px;
+  cursor: pointer;   
+  border-radius: 5px; 
+  font-size: 0.95rem;
+}  
+/* .sinkhole-cancel-btn:hover {
+  background-color: #049FD9;
+  color: white;
+} */
+
+.sinkhole-edit-btn, .sinkhole-delete-btn {   
+  padding: 6px 12px;   
+  margin-left: 4px;   
+  cursor: pointer;   
+  border-radius: 4px;   
+  border: none;   
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+}  
+
+.sinkhole-edit-btn {   
+  background-color: #6c757d;   
+  color: white; 
+}
+
+.sinkhole-edit-btn:hover {
+  background-color: #5a6268;
+}
+
+.sinkhole-delete-btn {   
+  background-color: #dc3545;   
+  color: white; 
+}
+
+.sinkhole-delete-btn:hover {
+  background-color: #c82333;
+}
+
+
+.sinkhole-select-container {
+  position: relative;   /* allow absolute positioning for arrow */
+  width: 100%;
+}
+.sinkhole-custom-select {
+  width: 100%;
+  padding: 12px 40px 12px 14px; /* extra space on right for arrow */
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #fff;
+  font-size: 14px;
+  appearance: none;       /* hide default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  /* box-shadow: 0 2px 6px rgba(0,0,0,0.08); */
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.sinkhole-custom-select:focus {
+  border-color: #049FD9;;
+  outline: none;
+}
+
+.sinkhole-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* so clicks pass through */
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid #555; /* down arrow */
+}
